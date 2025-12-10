@@ -11,8 +11,11 @@ import (
 func main() {
 	r := gin.Default()
 
+	r.StaticFile("/", "./webboard.html")
 	r.StaticFile("/webboard.html", "./webboard.html")
 
+	r.GET("/api/boards", func(c *gin.Context) {})
+	r.POST("/api/boards", func(c *gin.Context) {})
 	fmt.Println("listening and serving on :", os.Getenv("PORT"))
 	r.Run()
 	fmt.Println("bye")
