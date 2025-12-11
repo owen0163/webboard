@@ -1,3 +1,4 @@
+
 CREATE TABLE webboard (
     id INTEGER primary key autoincrement,
     name TEXT,
